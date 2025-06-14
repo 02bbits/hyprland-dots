@@ -1,0 +1,18 @@
+{
+  "include": "~/.config/waybar/modules.jsonc",
+  "width": 1920,
+  "margin-top": 0,
+  "height": 33,
+  "spacing": 10,
+  "margin-bottom": 7,
+  "reload_style_on_change": true,
+  "modules-left": ["hyprland/window", "group/apps"],
+  "modules-center": ["group/info", "hyprland/workspaces", "group/utils"],
+  "modules-right": [
+    //"group/control-center",
+    "group/system",
+    "clock",
+    "group/power",
+  ],
+}
+// testW

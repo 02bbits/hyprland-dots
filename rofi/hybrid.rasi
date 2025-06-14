@@ -1,0 +1,187 @@
+* {
+    /* Tokyo Night colors */
+    background:                  #1a1b26;
+    foreground:                 #c0caf5;
+    color0:                     #1a1b26;  /* Black */
+    color1:                     #f7768e;  /* Red */
+    color2:                     #9ece6a;  /* Green */
+    color3:                     #e0af68;  /* Yellow */
+    color4:                     #7aa2f7;  /* Blue */
+    color5:                     #bb9af7;  /* Magenta */
+    color6:                     #7dcfff;  /* Cyan */
+    color7:                     #a9b1d6;  /* White */
+    color8:                     #414868;  /* Bright Black */
+    color9:                     #f7768e;  /* Bright Red */
+    color10:                    #9ece6a;  /* Bright Green */
+    color11:                    #e0af68;  /* Bright Yellow */
+    color12:                    #7aa2f7;  /* Bright Blue */
+    color13:                    #bb9af7;  /* Bright Magenta */
+    color14:                    #7dcfff;  /* Bright Cyan */
+    color15:                    #c0caf5;  /* Bright White */
+    
+    background-alt:             #24283b;
+    selected:                   #c6a0f6;  /* Your specified accent color */
+    active:                     #7aa2f7;
+    urgent:                     #f7768e;
+    
+    border-color:                @color13;
+    handle-color:                @selected;
+    background-color:            @background;
+    foreground-color:            @foreground;
+    alternate-background:        @background-alt;
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    urgent-background:           @urgent;
+    urgent-foreground:           @background;
+    active-background:           @active;
+    active-foreground:           @background;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @background;
+    selected-urgent-background:  @active;
+    selected-urgent-foreground:  @background;
+    selected-active-background:  @urgent;
+    selected-active-foreground:  @color12;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @urgent;
+    alternate-urgent-foreground: @background;
+    alternate-active-background: @active;
+    alternate-active-foreground: @background;
+}
+
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       35%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border-color;
+    cursor:                      "default";
+    /* Backgroud Colors */
+    background-color:            @background-color;
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     5px 0px;
+    expand:                      false;
+    str:                         " 🔎";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    padding:                     5px 0px;
+    background-color:            @alternate-background;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+}
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+case-indicator {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               8px;
+    border-color:                @border-color;
+    background-color:            transparent;
+    text-color:                  @foreground-color;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @normal-foreground;
+}
+element normal.urgent {
+    background-color:            @urgent-background;
+    text-color:                  @urgent-foreground;
+}
+element normal.active {
+    background-color:            transparent;
+    text-color:                  @active-foreground;
+}
+
+element-text selected,
+element selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color:            @selected-urgent-background;
+    text-color:                  @selected-urgent-foreground;
+}
+element selected.active {
+    background-color:            @selected-active-background;
+    text-color:                  @selected-active-foreground;
+}
+element alternate.normal {
+    background-color:            @alternate-normal-background;
+    text-color:                  @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color:            @alternate-urgent-background;
+    text-color:                  @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color:            @alternate-active-background;
+    text-color:                  @alternate-active-foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    size: 2.95;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
